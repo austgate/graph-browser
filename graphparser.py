@@ -25,7 +25,6 @@ class GraphParser:
            @param string triples:
               The incoming string of triples from the url
         '''
-        print 'triples' + triples
         self.g.parse('graph.xml', format="xml")
 
         rdf = []
@@ -62,14 +61,3 @@ class GraphParser:
             return self.keys[last] + '::' + npred[-1]
         else:
             return 'The key could not be found. Please update the list'
-
-    
-
-
- 
-gb = GraphParser()
-
-#print gb.readable_key(data)
-
-for k in gb.data_parse(''):
-    print k
